@@ -85,4 +85,5 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="setting">Settings</string>
+    <string name="data">Data</string>
 </resources>

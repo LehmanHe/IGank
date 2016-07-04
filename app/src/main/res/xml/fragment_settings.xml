@@ -1,33 +1,32 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="@string/text_preference">
+    <PreferenceCategory android:title="@string/text_preference">
         <Preference
             android:key="@string/id_language"
-            android:title="@string/text_language"
-            android:summary="@string/language_summary"/>
+            android:summary="@string/language_summary"
+            android:title="@string/text_language" />
         <SwitchPreference
-            android:key="night_mode"
-            android:title="@string/text_night_mode"
-            android:checked="false"/>
-    </PreferenceCategory>
-    <PreferenceCategory
-        android:title="@string/text_network">
-        <SwitchPreference
-            android:key="only_wifi_load_pic"
-            android:title="@string/text_only_wifi_load_pic"
             android:checked="false"
-            android:summary="@string/text_only_wifi_load_pic_summary"/>
+            android:key="night_mode"
+            android:title="@string/text_night_mode" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/text_network">
+        <SwitchPreference
+            android:checked="false"
+            android:key="only_wifi_load_pic"
+            android:summary="@string/text_only_wifi_load_pic_summary"
+            android:title="@string/text_only_wifi_load_pic" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/about">
+    <PreferenceCategory android:title="@string/about">
         <Preference
             android:key="about_igank"
-            android:title="@string/about_igank"/>
+            android:title="@string/about_igank" />
     </PreferenceCategory>
 
-    <Preference
-        android:key="clear_cache"
-        android:title="@string/clear_cache"/>
+    <PreferenceCategory android:title="@string/data">
+        <Preference
+            android:key="clear_cache"
+            android:title="@string/clear_cache" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
