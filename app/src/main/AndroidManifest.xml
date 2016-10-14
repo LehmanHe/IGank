@@ -31,7 +31,8 @@
         </activity>
         <activity
             android:name=".ui.settings.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".support.BaseWebActivity"></activity>
     </application>
 
 </manifest>

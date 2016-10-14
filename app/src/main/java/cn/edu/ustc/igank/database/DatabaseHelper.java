@@ -5,6 +5,7 @@ import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import cn.edu.ustc.igank.database.table.AndroidTable;
 import cn.edu.ustc.igank.database.table.GirlTable;
 
 /**
@@ -34,6 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(GirlTable.CREATE_TABLE);
+        db.execSQL(AndroidTable.CREATE_TABLE);
     }
 
     @Override

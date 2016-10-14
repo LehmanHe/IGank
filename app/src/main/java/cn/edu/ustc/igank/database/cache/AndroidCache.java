@@ -99,7 +99,17 @@ public class AndroidCache extends BaseCache<AndroidBean>{
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Snack.showShort(R.string.network_error + "");
+                //Snack.showShort(R.string.network_error + "");
+                // notify
+                mHandler.sendEmptyMessage(CONSTANT.ID_FAILURE);
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+                //Snack.showShort(R.string.network_error + "");
+                // notify
+                mHandler.sendEmptyMessage(CONSTANT.ID_FAILURE);
             }
         });
     }

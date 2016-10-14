@@ -19,6 +19,7 @@ import com.roughike.bottombar.OnMenuTabClickListener;
 
 import cn.edu.ustc.igank.R;
 import cn.edu.ustc.igank.support.StatusBarUtil;
+import cn.edu.ustc.igank.ui.android.AndroidFragment;
 import cn.edu.ustc.igank.ui.girl.GirlFragment;
 import cn.edu.ustc.igank.ui.settings.SettingsActivity;
 import cn.edu.ustc.igank.ui.settings.SettingsFragment;
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //            else {
 //                return null;
-            return new GirlFragment();
+          return new AndroidFragment();
  //           }
         }
 
