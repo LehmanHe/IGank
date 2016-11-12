@@ -32,7 +32,11 @@
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name=".support.BaseWebActivity"></activity>
+        <activity android:name=".support.BaseWebActivity" />
+        <activity
+            android:name=".ui.base.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

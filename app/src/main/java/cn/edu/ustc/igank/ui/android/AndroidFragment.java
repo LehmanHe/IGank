@@ -62,7 +62,7 @@ public class AndroidFragment extends BaseListFragment {
 
     @Override
     protected RecyclerView.LayoutManager setLayoutManager() {
-        return new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        return new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
     }
 
 

@@ -86,4 +86,6 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="setting">Settings</string>
     <string name="data">Data</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="clear_cache_success">成功清理应用数据！</string>
 </resources>

@@ -73,7 +73,7 @@ public class WebDesignCache extends BaseCache<WebDesignBean> {
     @Override
     public void refresh() {
         AsyncHttpClient client = NetWorkUtil.getInstance();
-        client.get(GankAPI.getGirlAPI(CONSTANT.QUANTITY_OF_DATA, 1), new JsonHttpResponseHandler() {
+        client.get(GankAPI.getWebDesignAPI(CONSTANT.QUANTITY_OF_DATA, 1), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
@@ -108,7 +108,7 @@ public class WebDesignCache extends BaseCache<WebDesignBean> {
     @Override
     public void loadMore() {
         AsyncHttpClient client = NetWorkUtil.getInstance();
-        client.get(GankAPI.getGirlAPI(CONSTANT.QUANTITY_OF_DATA, currentPage + 1), new JsonHttpResponseHandler() {
+        client.get(GankAPI.getWebDesignAPI(CONSTANT.QUANTITY_OF_DATA, currentPage + 1), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {

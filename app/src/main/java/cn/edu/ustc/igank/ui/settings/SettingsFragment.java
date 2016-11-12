@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import cn.edu.ustc.igank.R;
+import cn.edu.ustc.igank.support.Settings;
+import cn.edu.ustc.igank.support.Snack;
+import cn.edu.ustc.igank.support.Utils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +20,7 @@ import cn.edu.ustc.igank.R;
 public class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener,
         Preference.OnPreferenceClickListener {
 
+    private Preference clearCache;
 
     public SettingsFragment() {
         // Required empty public constructor
@@ -26,6 +30,9 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.fragment_settings);
+
+        clearCache=findPreference(Settings.CLEAR_CACHE);
+        clearCache.setOnPreferenceClickListener(this);
     }
 
     @Override
@@ -35,6 +42,10 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
 
     @Override
     public boolean onPreferenceClick(Preference preference) {
+        if (preference == clearCache){
+            Utils.clearCache();
+            Snack.showShort(getString(R.string.clear_cache_success));
+        }
         return false;
     }
 }

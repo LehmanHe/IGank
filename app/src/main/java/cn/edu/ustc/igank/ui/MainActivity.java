@@ -20,9 +20,12 @@ import com.roughike.bottombar.OnMenuTabClickListener;
 import cn.edu.ustc.igank.R;
 import cn.edu.ustc.igank.support.StatusBarUtil;
 import cn.edu.ustc.igank.ui.android.AndroidFragment;
+import cn.edu.ustc.igank.ui.extend.ExtendFragment;
 import cn.edu.ustc.igank.ui.girl.GirlFragment;
+import cn.edu.ustc.igank.ui.ios.IOSFragment;
 import cn.edu.ustc.igank.ui.settings.SettingsActivity;
 import cn.edu.ustc.igank.ui.settings.SettingsFragment;
+import cn.edu.ustc.igank.ui.webDesign.WebDesignFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         StatusBarUtil.setColor(MainActivity.this, ContextCompat.getColor(this, R.color.colorAccent));
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Girl");
+        toolbar.setTitle("MeiZhi");
         setSupportActionBar(toolbar);
         toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent));
 
@@ -61,12 +64,28 @@ public class MainActivity extends AppCompatActivity {
                 if (menuItemId == R.id.bb_menu_recents) {
                     toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
                     StatusBarUtil.setColor(MainActivity.this, ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
+                    mViewPager.setCurrentItem(0);
+                    toolbar.setTitle("MeiZhi");
                 } else if (menuItemId == R.id.bb_menu_favorites) {
                     toolbar.setBackgroundColor(0xFF5D4037);
                     StatusBarUtil.setColor(MainActivity.this, 0xFF5D4037);
-                } else if (menuItemId == R.id.bb_menu_food) {
-                    toolbar.setBackgroundColor(0xFF9800);
+                    mViewPager.setCurrentItem(1);
+                    toolbar.setTitle("Android");
+                }else if (menuItemId == R.id.bb_menu_nearby) {
+                    toolbar.setBackgroundColor(0xFF7B1FA2);
+                    StatusBarUtil.setColor(MainActivity.this, 0x7B1FA2);
+                    mViewPager.setCurrentItem(2);
+                    toolbar.setTitle("IOS");
+                } else if (menuItemId == R.id.bb_menu_friends){
+                    toolbar.setBackgroundColor(0xFFFF5252);
+                    StatusBarUtil.setColor(MainActivity.this,0xFF5252);
+                    mViewPager.setCurrentItem(3);
+                    toolbar.setTitle("WebDesign");
+                }else if (menuItemId == R.id.bb_menu_food) {
+                    toolbar.setBackgroundColor(0xFFFF9800);
                     StatusBarUtil.setColor(MainActivity.this, 0xFF9800);
+                    mViewPager.setCurrentItem(4);
+                    toolbar.setTitle("Extend");
                 }
             }
 
@@ -80,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         // You can set colors for tabs in three different ways as shown below.
         mBottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
         mBottomBar.mapColorForTab(1, 0xFF5D4037);
-        mBottomBar.mapColorForTab(2, "#7B1FA2");
+        mBottomBar.mapColorForTab(2, 0xFF7B1FA2);
         mBottomBar.mapColorForTab(3, "#FF5252");
         mBottomBar.mapColorForTab(4, "#FF9800");
     }
@@ -116,20 +135,25 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-//            if (position == 0) {
-//                return new GirlFragment();
-//            }else if (position==4){
-//                return new GirlFragment();
-//            }
-//            else {
-//                return null;
-          return new AndroidFragment();
- //           }
+            if (position == 0) {
+                return new GirlFragment();
+            }else if (position==1){
+                return new AndroidFragment();
+            }
+            else if (position == 2){
+                return new IOSFragment();
+          //return new AndroidFragment();
+            }else if(position == 3){
+                return new WebDesignFragment();
+            }
+            else{
+                return new ExtendFragment();
+            }
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 5;
         }
     }
 }

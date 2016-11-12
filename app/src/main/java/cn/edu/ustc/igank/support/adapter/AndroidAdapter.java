@@ -1,6 +1,7 @@
 package cn.edu.ustc.igank.support.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +14,12 @@ import cn.edu.ustc.igank.R;
 import cn.edu.ustc.igank.database.cache.ICache;
 import cn.edu.ustc.igank.database.table.AndroidTable;
 import cn.edu.ustc.igank.model.AndroidBean;
+import cn.edu.ustc.igank.ui.base.WebViewActivity;
 
 /**
  * Created by lehman on 16/8/4.
  */
 public class AndroidAdapter extends BaseListAdapter<AndroidBean,AndroidAdapter.MyViewHolder> {
-
 
     public AndroidAdapter(Context context, ICache<AndroidBean> cache) {
         super(context, cache);
@@ -34,14 +35,20 @@ public class AndroidAdapter extends BaseListAdapter<AndroidBean,AndroidAdapter.M
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        AndroidBean androidBean=getItem(position);
+        final AndroidBean androidBean=getItem(position);
         holder.title.setText(androidBean.getDesc());
+        if (androidBean.getWho() == null|| androidBean.getWho() == ""){
+            androidBean.setWho("佚名");
+        }
         holder.author.setText(androidBean.getWho());
         holder.time.setText(androidBean.getCreatedAt());
         holder.parentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //TODO:add the intent to start another Activity
+                Intent intent =new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("url",androidBean.getUrl());
+                mContext.startActivity(intent);
             }
         });
     }

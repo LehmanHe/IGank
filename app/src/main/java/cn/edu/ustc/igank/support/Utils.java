@@ -53,11 +53,12 @@ import javax.xml.parsers.ParserConfigurationException;
 import cn.edu.ustc.igank.IGankApplication;
 import cn.edu.ustc.igank.R;
 import cn.edu.ustc.igank.database.DatabaseHelper;
+import cn.edu.ustc.igank.database.table.AndroidTable;
+import cn.edu.ustc.igank.database.table.ExtendTable;
 import cn.edu.ustc.igank.database.table.GirlTable;
+import cn.edu.ustc.igank.database.table.IOSTable;
+import cn.edu.ustc.igank.database.table.WebDesignTable;
 
-/**
- * Created by mummyding on 15-11-13.
- */
 public class Utils {
 
     private static boolean DEBUG = true;
@@ -177,7 +178,10 @@ public class Utils {
         SQLiteDatabase db = mHelper.getWritableDatabase();
 
         db.execSQL(mHelper.DELETE_TABLE_DATA + GirlTable.NAME);
-        //TODO:add other db`s action
+        db.execSQL(mHelper.DELETE_TABLE_DATA + AndroidTable.NAME);
+        db.execSQL(mHelper.DELETE_TABLE_DATA + IOSTable.NAME);
+        db.execSQL(mHelper.DELETE_TABLE_DATA + WebDesignTable.NAME);
+        db.execSQL(mHelper.DELETE_TABLE_DATA + ExtendTable.NAME);
     }
 
     // Must be called before setContentView()
@@ -189,10 +193,6 @@ public class Utils {
             case 1:
                 language = "zh";
                 country = "CN";
-                break;
-            case 2:
-                language = "zh";
-                country = "TW";
                 break;
             default:
                 language = "en";

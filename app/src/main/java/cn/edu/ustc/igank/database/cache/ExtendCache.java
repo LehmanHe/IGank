@@ -72,7 +72,7 @@ public class ExtendCache extends BaseCache<ExtendBean> {
     @Override
     public void refresh() {
         AsyncHttpClient client = NetWorkUtil.getInstance();
-        client.get(GankAPI.getGirlAPI(CONSTANT.QUANTITY_OF_DATA, 1), new JsonHttpResponseHandler() {
+        client.get(GankAPI.getExtendAPI(CONSTANT.QUANTITY_OF_DATA, 1), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
@@ -107,7 +107,7 @@ public class ExtendCache extends BaseCache<ExtendBean> {
     @Override
     public void loadMore() {
         AsyncHttpClient client = NetWorkUtil.getInstance();
-        client.get(GankAPI.getGirlAPI(CONSTANT.QUANTITY_OF_DATA, currentPage + 1), new JsonHttpResponseHandler() {
+        client.get(GankAPI.getExtendAPI(CONSTANT.QUANTITY_OF_DATA, currentPage + 1), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {

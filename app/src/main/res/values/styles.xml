@@ -17,34 +17,38 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <!-- Base application theme. -->
     <!--<style name="DayTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
-        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
-        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
-        <!--<item name="colorAccent">@color/colorAccent</item>-->
-        <!--<item name="background">@color/white</item>-->
-        <!--<item name="barTitleColor">@color/bar_title</item>-->
-        <!--<item name="barColor">@color/colorPrimary</item>-->
-        <!--<item name="textColor">@color/text_color</item>-->
-        <!--<item name="textLight">@color/text_light</item>-->
-        <!--<item name="textBright">@color/colorPrimary</item>-->
-        <!--<item name="dividerColor">@color/dividerColor</item>-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--<item name="background">@color/white</item>-->
+    <!--<item name="barTitleColor">@color/bar_title</item>-->
+    <!--<item name="barColor">@color/colorPrimary</item>-->
+    <!--<item name="textColor">@color/text_color</item>-->
+    <!--<item name="textLight">@color/text_light</item>-->
+    <!--<item name="textBright">@color/colorPrimary</item>-->
+    <!--<item name="dividerColor">@color/dividerColor</item>-->
     <!--</style>-->
 
 
     <!--<style name="NightTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
-        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-        <!--<item name="colorPrimary">@color/night_primary</item>-->
-        <!--<item name="colorPrimaryDark">@color/night_primary_dark</item>-->
-        <!--<item name="colorAccent">@color/night_accent</item>-->
-        <!--<item name="background">@color/night_primary</item>-->
-        <!--<item name="barTitleColor">@color/white</item>-->
-        <!--<item name="barColor">@color/night_primary</item>-->
-        <!--<item name="textColor">@color/white</item>-->
-        <!--<item name="textLight">@color/text_light</item>-->
-        <!--<item name="textBright">@color/night_primary</item>-->
-        <!--<item name="dividerColor">@color/dividerColor</item>-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">@color/night_primary</item>-->
+    <!--<item name="colorPrimaryDark">@color/night_primary_dark</item>-->
+    <!--<item name="colorAccent">@color/night_accent</item>-->
+    <!--<item name="background">@color/night_primary</item>-->
+    <!--<item name="barTitleColor">@color/white</item>-->
+    <!--<item name="barColor">@color/night_primary</item>-->
+    <!--<item name="textColor">@color/white</item>-->
+    <!--<item name="textLight">@color/text_light</item>-->
+    <!--<item name="textBright">@color/night_primary</item>-->
+    <!--<item name="dividerColor">@color/dividerColor</item>-->
 
     <!--</style>-->
 

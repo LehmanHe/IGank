@@ -6,7 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import cn.edu.ustc.igank.database.table.AndroidTable;
+import cn.edu.ustc.igank.database.table.ExtendTable;
 import cn.edu.ustc.igank.database.table.GirlTable;
+import cn.edu.ustc.igank.database.table.IOSTable;
+import cn.edu.ustc.igank.database.table.WebDesignTable;
 
 /**
  * Created by Lehman on 2016-06-25.
@@ -36,6 +39,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(GirlTable.CREATE_TABLE);
         db.execSQL(AndroidTable.CREATE_TABLE);
+        db.execSQL(IOSTable.CREATE_TABLE);
+        db.execSQL(WebDesignTable.CREATE_TABLE);
+        db.execSQL(ExtendTable.CREATE_TABLE);
     }
 
     @Override

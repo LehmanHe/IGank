@@ -21,6 +21,7 @@ package cn.edu.ustc.igank.support;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
 
 
 import cn.edu.ustc.igank.IGankApplication;
@@ -35,6 +36,7 @@ public class Settings {
     public static boolean isExitConfirm = true;
     public static int searchID = 0;
     public static int swipeID = 0;
+    public static boolean isWIFI = true;
 
     public static final String XML_NAME = "settings";
 
@@ -95,6 +97,19 @@ public class Settings {
 
     public String getString(String key, String defValue) {
         return mPrefs.getString(key, defValue);
+    }
+
+    public static boolean readNetworkState() {
+
+        ConnectivityManager cm = (ConnectivityManager) IGankApplication.AppContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        if (cm != null && cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected()) {
+            isWIFI = (cm.getActiveNetworkInfo().getType() == ConnectivityManager.TYPE_WIFI);
+            return true;
+        } else {
+
+            return false;
+        }
     }
 
 }
