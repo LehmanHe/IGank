@@ -8,21 +8,21 @@
 
     <string name="network_error">network_error</string>
     <string name="refresh_success">refresh_success</string>
-    <string name="text_debug_data">"Debug Data"</string>
+    <string name="text_debug_data" translatable="false">"Debug Data"</string>
     <string name="notify_info_copied">Info copied to Clipboard! You can paste it to an edit area</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="text_preference">Preference</string>
-    <string name="id_language">id_language</string>
+    <string name="id_language" translatable="false">id_language</string>
     <string name="text_language">Language</string>
     <string name="text_night_mode">Night Mode</string>
     <string name="text_network">Network</string>
-    <string name="text_only_wifi_load_pic">Load Picture Only In WIFI</string>
+    <string name="text_only_wifi_load_pic" translatable="false">Load Picture Only In WIFI</string>
     <string name="text_only_wifi_load_pic_summary">Don`t Load Picture In 2G/3G/4G</string>
     <string name="about">About</string>
     <string name="about_igank">About IGank</string>
-    <string name="clear_cache">Clear APP`s Data</string>
+    <string name="clear_cache">Clean cache Data</string>
     <string name="language_summary">English</string>
     <string name="menu_settins">Settings</string>
     <string name="title_activity_settings">Settings</string>
@@ -30,17 +30,17 @@
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
+    <string name="pref_header_general" translatable="false">General</string>
 
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact
+    <string name="pref_title_social_recommendations" translatable="false">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations" translatable="false">Recommendations for people to contact
         based on your message history
     </string>
 
-    <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_title_display_name" translatable="false">Display name</string>
+    <string name="pref_default_display_name" translatable="false">John Smith</string>
 
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string name="pref_title_add_friends_to_messages" translatable="false">Add friends to messages</string>
     <string-array name="pref_example_list_titles">
         <item>Always</item>
         <item>When possible</item>
@@ -53,9 +53,9 @@
     </string-array>
 
     <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_header_data_sync" translatable="false">Data &amp; sync</string>
 
-    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_sync_frequency" translatable="false">Sync frequency</string>
     <string-array name="pref_sync_frequency_titles">
         <item>15 minutes</item>
         <item>30 minutes</item>
@@ -73,19 +73,19 @@
         <item>-1</item>
     </string-array>
 
-    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_title_system_sync_settings" translatable="false">System sync settings</string>
 
     <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_header_notifications" translatable="false">Notifications</string>
 
-    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_new_message_notifications" translatable="false">New message notifications</string>
 
-    <string name="pref_title_ringtone">Ringtone</string>
-    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_ringtone" translatable="false">Ringtone</string>
+    <string name="pref_ringtone_silent" translatable="false">Silent</string>
 
-    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="pref_title_vibrate" translatable="false">Vibrate</string>
     <string name="setting">Settings</string>
     <string name="data">Data</string>
-    <string name="title_activity_web_view">WebViewActivity</string>
-    <string name="clear_cache_success">成功清理应用数据！</string>
+    <string name="title_activity_web_view" translatable="false">WebViewActivity</string>
+    <string name="clear_cache_success">Clean cache Data successfully！</string>
 </resources>

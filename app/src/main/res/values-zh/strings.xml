@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IGank</string>
+    <string name="about">关于</string>
+    <string name="about_igank">关于IGank</string>
+    <string name="action_settings">设置</string>
+    <string name="clear_cache">清理缓存数据</string>
+    <string name="clear_cache_success">成功清理应用数据！</string>
+    <string name="data">数据</string>
+    <string name="language_summary">英语</string>
+    <string name="menu_settins">设置</string>
+    <string name="navigation_drawer_close">关闭导航栏</string>
+    <string name="navigation_drawer_open">打开导航栏</string>
+    <string name="network_error">网络错误</string>
+    <string name="notify_info_copied">已复制到剪贴板</string>
+    <string name="pref_default_display_name"></string>
+    <string name="pref_description_social_recommendations"></string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="setting">设置</string>
+    <string name="text_language">语言</string>
+    <string name="text_network">网络</string>
+    <string name="text_night_mode">夜间模式</string>
+    <string name="text_only_wifi_load_pic_summary">使用数据流量时不加载图片</string>
+    <string name="text_only_wifi_load_pic"></string>
+    <string name="text_preference">偏好设置</string>
+    <string name="title_activity_settings">设置</string>
+    <string name="title_activity_web_view"></string>
+</resources>
