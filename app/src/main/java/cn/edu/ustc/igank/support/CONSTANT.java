@@ -13,6 +13,6 @@ public class CONSTANT {
     //网络请求的数据量
     public static final int QUANTITY_OF_DATA=20;
 
-    public static final int NIGHT_BRIGHTNESS = 40;
+    public static final int NIGHT_BRIGHTNESS = 30;
     public static final int DAY_BRIGHTNESS = 150;
 }

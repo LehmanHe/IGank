@@ -11,8 +11,6 @@
     <string name="text_debug_data" translatable="false">"Debug Data"</string>
     <string name="notify_info_copied">Info copied to Clipboard! You can paste it to an edit area</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="text_preference">Preference</string>
     <string name="id_language" translatable="false">id_language</string>
     <string name="text_language">Language</string>
@@ -41,12 +39,12 @@
     <string name="pref_default_display_name" translatable="false">John Smith</string>
 
     <string name="pref_title_add_friends_to_messages" translatable="false">Add friends to messages</string>
-    <string-array name="pref_example_list_titles">
+    <string-array name="pref_example_list_titles" translatable="false">
         <item>Always</item>
         <item>When possible</item>
         <item>Never</item>
     </string-array>
-    <string-array name="pref_example_list_values">
+    <string-array name="pref_example_list_values" translatable="false">
         <item>1</item>
         <item>0</item>
         <item>-1</item>
@@ -56,7 +54,7 @@
     <string name="pref_header_data_sync" translatable="false">Data &amp; sync</string>
 
     <string name="pref_title_sync_frequency" translatable="false">Sync frequency</string>
-    <string-array name="pref_sync_frequency_titles">
+    <string-array name="pref_sync_frequency_titles" translatable="false">
         <item>15 minutes</item>
         <item>30 minutes</item>
         <item>1 hour</item>
@@ -64,7 +62,7 @@
         <item>6 hours</item>
         <item>Never</item>
     </string-array>
-    <string-array name="pref_sync_frequency_values">
+    <string-array name="pref_sync_frequency_values" translatable="false">
         <item>15</item>
         <item>30</item>
         <item>60</item>
@@ -88,4 +86,14 @@
     <string name="data">Data</string>
     <string name="title_activity_web_view" translatable="false">WebViewActivity</string>
     <string name="clear_cache_success">Clean cache Data successfully！</string>
+    <string name="meizhi">MeiZhi</string>
+    <string name="android">Android</string>
+    <string name="ios">IOS</string>
+    <string name="web_desigin">WebDesign</string>
+    <string name="extend">Extend</string>
+    <string name="about_dialog_title">About IGank</string>
+    <string name="about_author">Author : LehmanHe</string>
+    <string name="about_github">GitHub Repository : https://github.com/LehmanHe/IGank</string>
+    <string name="about_API">Data Resource : gank.io</string>
+    <string name="image_download">The photo download successfully</string>
 </resources>

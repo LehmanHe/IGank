@@ -1,11 +1,13 @@
 package cn.edu.ustc.igank.ui.settings;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewOutlineProvider;
 
 import cn.edu.ustc.igank.R;
 import cn.edu.ustc.igank.support.StatusBarUtil;
@@ -50,4 +52,11 @@ public class SettingsActivity extends AppCompatActivity {
         });
         getFragmentManager().beginTransaction().replace(R.id.framelayout,new SettingsFragment()).commit();
     }
+
+    public void setLanguage(int lang){
+        Intent intent = getIntent();
+        intent.putExtra("lang",lang);
+        setResult(1,intent);
+    }
+
 }

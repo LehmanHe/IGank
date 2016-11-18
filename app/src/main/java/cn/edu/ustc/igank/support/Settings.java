@@ -48,7 +48,9 @@ public class Settings {
 
     public static final String AUTO_REFRESH = "auto_refresh";
 
-    public static final String LANGUAGE = "language";
+    public static final String ABOUT_IGANK = "about_igank";
+
+    public static final String LANGUAGE = "id_language";
 
     public static final String EXIT_CONFIRM = "exit_confirm";
 

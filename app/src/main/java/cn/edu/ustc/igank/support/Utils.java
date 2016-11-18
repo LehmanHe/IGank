@@ -157,11 +157,7 @@ public class Utils {
             String country = Locale.getDefault().getCountry();
 
             if (language.equalsIgnoreCase("zh")) {
-                if (country.equalsIgnoreCase("CN")) {
-                    lang = 1;
-                } else {
-                    lang = 2;
-                }
+                lang = 1;
             } else {
                 lang = 0;
             }

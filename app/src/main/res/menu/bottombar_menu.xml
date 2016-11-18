@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bb_menu_recents"
-        android:icon="@drawable/ic_recents"
-        android:title="Recents" />
-    <item
-        android:id="@+id/bb_menu_favorites"
+        android:id="@+id/bb_menu_meizhi"
         android:icon="@drawable/ic_favorites"
-        android:title="Favorites" />
+        android:title="@string/meizhi" />
     <item
-        android:id="@+id/bb_menu_nearby"
-        android:icon="@drawable/ic_nearby"
-        android:title="Nearby" />
+        android:id="@+id/bb_menu_android"
+        android:icon="@drawable/ic_android_black_24px"
+        android:title="@string/android" />
     <item
-        android:id="@+id/bb_menu_friends"
-        android:icon="@drawable/ic_friends"
-        android:title="Friends" />
+        android:id="@+id/bb_menu_ios"
+        android:icon="@drawable/ic_apple_72px_1137741_easyiconnet"
+        android:title="@string/ios" />
     <item
-        android:id="@+id/bb_menu_food"
+        android:id="@+id/bb_menu_webdesign"
+        android:icon="@drawable/ic_chrome"
+        android:title="@string/web_desigin" />
+    <item
+        android:id="@+id/bb_menu_extend"
         android:icon="@drawable/ic_restaurants"
-        android:title="Food" />
+        android:title="@string/extend" />
 </menu>

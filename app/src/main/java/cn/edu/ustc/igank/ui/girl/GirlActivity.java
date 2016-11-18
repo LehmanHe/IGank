@@ -3,10 +3,12 @@ package cn.edu.ustc.igank.ui.girl;
 import android.content.Intent;
 import android.graphics.drawable.Animatable;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -22,14 +24,23 @@ import com.facebook.drawee.components.DraweeEventTracker;
 import com.facebook.drawee.controller.BaseControllerListener;
 import com.facebook.imagepipeline.image.ImageInfo;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import cn.edu.ustc.igank.R;
+import cn.edu.ustc.igank.support.ImageDownloadTask;
 import me.relex.photodraweeview.PhotoDraweeView;
 
 public class GirlActivity extends AppCompatActivity {
 
     TextView title;
     private PhotoDraweeView mPhotoDraweeView;
-    String url;
+    public String url;
     String desc;
     String _id;
 
@@ -48,9 +59,8 @@ public class GirlActivity extends AppCompatActivity {
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(final View view) {
+                new ImageDownloadTask(url,view).start();
             }
         });
 

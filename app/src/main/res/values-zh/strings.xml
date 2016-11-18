@@ -13,16 +13,21 @@
     <string name="navigation_drawer_open">打开导航栏</string>
     <string name="network_error">网络错误</string>
     <string name="notify_info_copied">已复制到剪贴板</string>
-    <string name="pref_default_display_name"></string>
-    <string name="pref_description_social_recommendations"></string>
     <string name="refresh_success">刷新成功</string>
     <string name="setting">设置</string>
     <string name="text_language">语言</string>
     <string name="text_network">网络</string>
     <string name="text_night_mode">夜间模式</string>
     <string name="text_only_wifi_load_pic_summary">使用数据流量时不加载图片</string>
-    <string name="text_only_wifi_load_pic"></string>
     <string name="text_preference">偏好设置</string>
     <string name="title_activity_settings">设置</string>
-    <string name="title_activity_web_view"></string>
+    <string name="meizhi">妹纸</string>
+    <string name="android">安卓</string>
+    <string name="extend">扩展</string>
+    <string name="ios">苹果</string>
+    <string name="web_desigin">前端</string>
+    <string name="about_API">数据来源 ：gank.io</string>
+    <string name="about_github">工程源码 ：https://github.com/LehmanHe/IGank</string>
+    <string name="about_dialog_title">关于IGank</string>
+    <string name="about_author">作者 ：LehmanHe</string>
 </resources>

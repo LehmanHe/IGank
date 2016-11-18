@@ -11,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -18,29 +19,57 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
 
 import cn.edu.ustc.igank.R;
+import cn.edu.ustc.igank.support.CONSTANT;
+import cn.edu.ustc.igank.support.Settings;
 import cn.edu.ustc.igank.support.StatusBarUtil;
+import cn.edu.ustc.igank.support.Utils;
 import cn.edu.ustc.igank.ui.android.AndroidFragment;
 import cn.edu.ustc.igank.ui.extend.ExtendFragment;
 import cn.edu.ustc.igank.ui.girl.GirlFragment;
 import cn.edu.ustc.igank.ui.ios.IOSFragment;
 import cn.edu.ustc.igank.ui.settings.SettingsActivity;
-import cn.edu.ustc.igank.ui.settings.SettingsFragment;
 import cn.edu.ustc.igank.ui.webDesign.WebDesignFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int mLang = -1;
+    private Settings mSettings = Settings.getInstance();
+
     private BottomBar mBottomBar;
     private ViewPager mViewPager;
     private Toolbar toolbar;
+    private int CHANGE_LANGUAGE = 1010;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Language
+        mLang = Utils.getCurrentLanguage();
+        if (mLang > -1) {
+            Utils.changeLanguage(this, mLang);
+        }
+
+        // change Brightness
+        if(mSettings.isNightMode && Utils.getSysScreenBrightness() > CONSTANT.NIGHT_BRIGHTNESS){
+            Utils.setSysScreenBrightness(CONSTANT.NIGHT_BRIGHTNESS);
+        }else if(mSettings.isNightMode == false && Utils.getSysScreenBrightness() == CONSTANT.NIGHT_BRIGHTNESS){
+            Utils.setSysScreenBrightness(CONSTANT.DAY_BRIGHTNESS);
+        }
+
+        if(Settings.isNightMode){
+            this.setTheme(R.style.NightTheme);
+        }else{
+            this.setTheme(R.style.DayTheme);
+        }
+
         StatusBarUtil.setColor(MainActivity.this, ContextCompat.getColor(this, R.color.colorAccent));
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("MeiZhi");
+        toolbar.setTitle("fuck");
+        toolbar.setTitle("you");
+        Log.e("Meizhi",getString(R.string.meizhi));
         setSupportActionBar(toolbar);
         toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent));
 
@@ -61,31 +90,31 @@ public class MainActivity extends AppCompatActivity {
         mBottomBar.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override
             public void onMenuTabSelected(@IdRes int menuItemId) {
-                if (menuItemId == R.id.bb_menu_recents) {
+                if (menuItemId == R.id.bb_menu_meizhi) {
                     toolbar.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
                     StatusBarUtil.setColor(MainActivity.this, ContextCompat.getColor(MainActivity.this, R.color.colorAccent));
                     mViewPager.setCurrentItem(0);
-                    toolbar.setTitle("MeiZhi");
-                } else if (menuItemId == R.id.bb_menu_favorites) {
-                    toolbar.setBackgroundColor(0xFF5D4037);
-                    StatusBarUtil.setColor(MainActivity.this, 0xFF5D4037);
+                    toolbar.setTitle(R.string.meizhi);
+                } else if (menuItemId == R.id.bb_menu_android) {
+                    toolbar.setBackgroundColor(0xFF5FAA3D);
+                    StatusBarUtil.setColor(MainActivity.this, 0xFF5FAA3D);
                     mViewPager.setCurrentItem(1);
-                    toolbar.setTitle("Android");
-                }else if (menuItemId == R.id.bb_menu_nearby) {
+                    toolbar.setTitle(R.string.android);
+                }else if (menuItemId == R.id.bb_menu_ios) {
                     toolbar.setBackgroundColor(0xFF7B1FA2);
                     StatusBarUtil.setColor(MainActivity.this, 0x7B1FA2);
                     mViewPager.setCurrentItem(2);
-                    toolbar.setTitle("IOS");
-                } else if (menuItemId == R.id.bb_menu_friends){
+                    toolbar.setTitle(R.string.ios);
+                } else if (menuItemId == R.id.bb_menu_webdesign){
                     toolbar.setBackgroundColor(0xFFFF5252);
                     StatusBarUtil.setColor(MainActivity.this,0xFF5252);
                     mViewPager.setCurrentItem(3);
-                    toolbar.setTitle("WebDesign");
-                }else if (menuItemId == R.id.bb_menu_food) {
+                    toolbar.setTitle(R.string.web_desigin);
+                }else if (menuItemId == R.id.bb_menu_extend) {
                     toolbar.setBackgroundColor(0xFFFF9800);
                     StatusBarUtil.setColor(MainActivity.this, 0xFF9800);
                     mViewPager.setCurrentItem(4);
-                    toolbar.setTitle("Extend");
+                    toolbar.setTitle(R.string.extend);
                 }
             }
 
@@ -98,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         // Setting colors for different tabs when there's more than three of them.
         // You can set colors for tabs in three different ways as shown below.
         mBottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
-        mBottomBar.mapColorForTab(1, 0xFF5D4037);
+        mBottomBar.mapColorForTab(1, 0xFF5FAA3D);
         mBottomBar.mapColorForTab(2, 0xFF7B1FA2);
         mBottomBar.mapColorForTab(3, "#FF5252");
         mBottomBar.mapColorForTab(4, "#FF9800");
@@ -122,9 +151,17 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId()==R.id.menu_settings){
             Intent intent=new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent,CHANGE_LANGUAGE);
         }
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CHANGE_LANGUAGE){
+            this.recreate();
+        }
     }
 
     class MyPagerAdapter extends FragmentPagerAdapter {
@@ -154,6 +191,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return 5;
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(Settings.needRecreate) {
+            Settings.needRecreate = false;
+            this.recreate();
         }
     }
 }
