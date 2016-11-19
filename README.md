@@ -6,7 +6,9 @@
 * [fresco](https://github.com/facebook/fresco)
 * [PhotoDraweeView](https://github.com/ongakuer/PhotoDraweeView)
 * [BottomBar](https://github.com/roughike/BottomBar)
+
 and so on
+
 ## 功能
 本地数据缓存，使用sqlite实现；
 多语言切换（英文和中文），方便用户使用；
@@ -14,7 +16,11 @@ and so on
 夜间模式，调整屏幕亮度，方便用户夜间使用；
 
 ## 界面展示
-![](https://github.com/LehmanHe/IGank/raw/master/Screenshot_2016-11-19-15-36-09-308_cn.edu.ustc.ig.png)
+![](https://github.com/LehmanHe/IGank/raw/master/p0.png)
+![](https://github.com/LehmanHe/IGank/raw/master/p1.png)
+![](https://github.com/LehmanHe/IGank/raw/master/p2.png)
+![](https://github.com/LehmanHe/IGank/raw/master/p3.png)
+![](https://github.com/LehmanHe/IGank/raw/master/p4.png)
 
 ## 类图
 ![](https://github.com/LehmanHe/IGank/raw/master/igank001.bmp)
