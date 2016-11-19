@@ -30,4 +30,5 @@
     <string name="about_github">工程源码 ：https://github.com/LehmanHe/IGank</string>
     <string name="about_dialog_title">关于IGank</string>
     <string name="about_author">作者 ：LehmanHe</string>
+    <string name="image_download">图片下载成功！</string>
 </resources>
