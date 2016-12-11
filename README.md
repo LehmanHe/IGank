@@ -1,4 +1,5 @@
 # IGank
+ [APK下载](http://fir.im/igank)
 ##简介
 一个分享Android、IOS、前端开发技术及精选妹子图片的Android APP。应用中的数据均来自[干货集中营](http://gank.io/)。
 ## 依赖库
