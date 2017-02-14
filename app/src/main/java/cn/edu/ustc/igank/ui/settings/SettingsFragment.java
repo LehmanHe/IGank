@@ -2,6 +2,7 @@ package cn.edu.ustc.igank.ui.settings;
 
 import android.app.FragmentManager;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -20,6 +21,7 @@ import cn.edu.ustc.igank.support.Snack;
 import cn.edu.ustc.igank.support.Utils;
 import cn.edu.ustc.igank.ui.MainActivity;
 import cn.edu.ustc.igank.ui.about.AboutDialogFragment;
+import cn.edu.ustc.igank.ui.base.WebViewActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,9 +83,12 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
         }else if(preference == mLanguage){
             showLangDialog();
         }else if(preference == mAboutIGank){
-            FragmentManager fm = getFragmentManager();
-            AboutDialogFragment dialogFragment = new AboutDialogFragment ();
-            dialogFragment.show(fm,"about");
+//            FragmentManager fm = getFragmentManager();
+//            AboutDialogFragment dialogFragment = new AboutDialogFragment ();
+//            dialogFragment.show(fm,"about");
+            Intent intent =new Intent(getActivity(), WebViewActivity.class);
+            intent.putExtra("url","file:///android_asset/about.html");
+            getActivity().startActivity(intent);
         }
         return false;
     }
